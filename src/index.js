@@ -5,7 +5,11 @@ class Queue {
         
         this.name = options.name;
         if(options.concurrency < 2) {
+            this.limit = 2;
             throw new Error('Minimum concurrency should be 2. Setting it to 2');
+        }
+        else {
+            this.limit = options.concurrency;
         }
 
         this.limit = options.concurrency;
@@ -160,3 +164,32 @@ class Queue {
 }
 
 module.exports = Queue;
+
+
+
+//------------------code execution --------------- //
+
+let options = {
+    name: 'example',
+    concurrency: 3,
+    async: true,
+}
+
+let task = new Queue(options);
+
+for( let i=0;i<20;i++) {
+
+    let dataOptions = {
+        startQueue: false,
+        taskType: 'url',
+        data: 'https://httpbin.org/post',
+        method: 'POST',
+        payload: {tittle:'tittle', body:'body'}
+    }
+
+    task.createJob(dataOptions);
+}
+
+//task.runBackgroundTasks();
+task.runAllTasks()
+

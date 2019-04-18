@@ -1,6 +1,6 @@
 {
   "name": "zomato-queue",
-  "version": "1.0.08",
+  "version": "1.0.13",
   "description": "async task manager",
   "main": "index.js",
   "scripts": {
