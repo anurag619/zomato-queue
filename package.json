@@ -1,6 +1,6 @@
 {
   "name": "zomato-queue",
-  "version": "1.0.04",
+  "version": "1.0.07",
   "description": "async task manager",
   "main": "index.js",
   "scripts": {
@@ -9,6 +9,10 @@
   },
   "keywords": [],
   "author": "anurag",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/anurag619/zomato-queue.git"
+  },
   "license": "ISC",
   "devDependencies": {
     "@babel/core": "^7.4.3",

@@ -1,6 +1,6 @@
 
 
-class Atomic {
+class Queue {
     constructor(options) {
         
         this.name = options.name;
@@ -159,4 +159,4 @@ class Atomic {
     }
 }
 
-module.exports = Atomic;
+module.exports = Queue;
